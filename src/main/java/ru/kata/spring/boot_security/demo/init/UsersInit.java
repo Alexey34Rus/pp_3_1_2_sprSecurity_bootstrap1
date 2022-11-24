@@ -31,17 +31,12 @@ public class UsersInit {
 
         User user1 = new User
                 ("user", "Иван", "Иванов",
-                        (byte) 34, "user@mail.ru", new BCryptPasswordEncoder().encode("user")); // 200
+                        (byte) 34, "user@mail.ru", new BCryptPasswordEncoder().encode("user"));
         User user2 = new User
                 ("admin", "Алексей", "Сидоров",
-                        (byte) 24, "admin123@mail.ru", new BCryptPasswordEncoder().encode("admin")); // 100
+                        (byte) 24, "admin123@mail.ru", new BCryptPasswordEncoder().encode("admin"));
 
-//        User user1 = new User
-//                ( "user@mail.ru", "Иван",
-//                        "Иванов", (byte) 23, new BCryptPasswordEncoder().encode("user"));
-//        User user2 = new User
-//                ("admin@mail.ru", "Алексей", "Сидоров",
-//                        (byte) 24, new BCryptPasswordEncoder().encode("admin"));
+//
 
         user1.setRoles(new HashSet<>(Set.of(role2)));
         user2.setRoles(new HashSet<>(Set.of(role1)));
