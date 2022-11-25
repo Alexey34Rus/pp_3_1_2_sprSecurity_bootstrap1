@@ -18,10 +18,9 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping()
-    public String getUserPage(Model model, Principal principal) {
-        User user = userService.getUserByUsername(principal.getName());
-        model.addAttribute("user", user);
+    @GetMapping
+    public String getShowCurrentUser(Model model, Principal principal) {
+        model.addAttribute("authUser", userService.getUserByName(principal.getName()));
         return "user";
     }
 }

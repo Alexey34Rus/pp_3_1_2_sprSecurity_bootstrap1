@@ -30,11 +30,11 @@ public class UsersInit {
         roleRepository.save(role2);
 
         User user1 = new User
-                ("user", "Иван", "Иванов",
-                        (byte) 34, "user@mail.ru", new BCryptPasswordEncoder().encode("user"));
+                ("user@mail.ru", "Иван", "Иванов", (byte) 23,
+                        new BCryptPasswordEncoder().encode("user"));
         User user2 = new User
-                ("admin", "Алексей", "Сидоров",
-                        (byte) 24, "admin123@mail.ru", new BCryptPasswordEncoder().encode("admin"));
+                ("admin@mail.ru", "Алексей", "Петров", (byte) 33,
+                        new BCryptPasswordEncoder().encode("admin"));
 
 //
 
